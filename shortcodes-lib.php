@@ -4,7 +4,7 @@ Plugin Name: Shortcodes Lib
 Plugin URI: http://www.wordpress.com/plugin
 Description: A free shortcodes plugin, based to shortcoder-insert-tool and symple-shortcodes plugins
 Author: Benoit S.
-Version: 1.0
+Version: 1.1
 */
 
 // 
