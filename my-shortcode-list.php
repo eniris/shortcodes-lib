@@ -86,13 +86,13 @@ require_once('../../../wp-admin/admin.php');
         <div class="content" id="content">
 			
 			<div class="shortcode_item" id="my_spacing">
-				<div class="shortcode_demo">[my_spacing size="40px"]</div>
+				<div class="shortcode_demo">[my_spacing size="40"]</div>
 				<input type="hidden" id="shortcodetype" value="1">
 				<input type="hidden" id="shortcodecontent" value="">
-				<div class="attr">
+				<div class="attr small">
 					<span class="label"><?php _e('Size', 'shortcodes_lib') ?></span>
-					<input type="text" value="40px" id="size" class="attrVal">
-					<span class="description"><?php _e('Height space (in pixels)', 'shortcodes_lib') ?></span>
+					<input type="text" value="40" id="size" class="attrVal">
+					<span class="description"><?php _e('pixels (without unit)', 'shortcodes_lib') ?></span>
 				</div>
 			</div><!-- //#my_spacing -->
 			
@@ -104,7 +104,7 @@ require_once('../../../wp-admin/admin.php');
 			</div><!-- //#my_clear_floats -->
 			
 			<div class="shortcode_item" id="my_divider">
-				<div class="shortcode_demo">[my_divider style="solid" margin_top="20px" margin_bottom="20px" cleardivider="both" gotop="0"]</div>
+				<div class="shortcode_demo">[my_divider style="solid" margin_top="20" margin_bottom="20" cleardivider="both" gotop="0"]</div>
 				<input type="hidden" id="shortcodetype" value="1">
 				<input type="hidden" id="shortcodecontent" value="">
 				<div class="attr">
@@ -119,15 +119,15 @@ require_once('../../../wp-admin/admin.php');
 					</select>
 					<span class="description"><?php _e('', 'shortcodes_lib') ?></span>
 				</div>
-				<div class="attr">
+				<div class="attr small">
 					<span class="label"><?php _e('Margin top', 'shortcodes_lib') ?></span>
-					<input type="text" id="margin_top" class="attrVal" value="20px">
-					<span class="description"><?php _e('(in pixels)', 'shortcodes_lib') ?></span>
+					<input type="text" id="margin_top" class="attrVal" value="20">
+					<span class="description"><?php _e('pixels (without unit)', 'shortcodes_lib') ?></span>
 				</div>
-				<div class="attr">
+				<div class="attr small">
 					<span class="label"><?php _e('Margin bottom', 'shortcodes_lib') ?></span>
-					<input type="text" id="margin_bottom" class="attrVal" value="20px">
-					<span class="description"><?php _e('(in pixels)', 'shortcodes_lib') ?></span>
+					<input type="text" id="margin_bottom" class="attrVal" value="20">
+					<span class="description"><?php _e('pixels (without unit)', 'shortcodes_lib') ?></span>
 				</div>
 				<div class="attr">
 					<span class="label"><?php _e('Top link', 'shortcodes_lib') ?></span>
@@ -153,25 +153,25 @@ require_once('../../../wp-admin/admin.php');
 				<div class="shortcode_demo">[my_googlemap title="<?php _e('Champ de Mars, 5 Avenue Anatole France, 75007 Paris', 'shortcodes_lib') ?>" zoom="10" height="250"]</div>
 				<input type="hidden" id="shortcodetype" value="1">
 				<input type="hidden" id="shortcodecontent" value="">
-				<div class="attr">
+				<div class="attr large">
 					<span class="label"><?php _e('Title', 'shortcodes_lib') ?></span>
 					<input type="text" id="title" class="attrVal" value="<?php _e('Champ de Mars, 5 Avenue Anatole France, 75007 Paris', 'shortcodes_lib') ?>">
 					<span class="description"><?php _e('', 'shortcodes_lib') ?></span>
 				</div>
-				<div class="attr">
+				<div class="attr small">
 					<span class="label"><?php _e('Zoom', 'shortcodes_lib') ?></span>
 					<input type="text" id="zoom" class="attrVal" value="10">
 					<span class="description"><?php _e('', 'shortcodes_lib') ?></span>
 				</div>
-				<div class="attr">
+				<div class="attr small">
 					<span class="label"><?php _e('Height', 'shortcodes_lib') ?></span>
 					<input type="text" id="height" class="attrVal" value="250">
-					<span class="description"><?php _e('', 'shortcodes_lib') ?></span>
+					<span class="description"><?php _e('pixels (without unit)', 'shortcodes_lib') ?></span>
 				</div>
 			</div><!-- //#my_googlemap -->
 			
 			<div class="shortcode_item" id="my_heading">
-				<div class="shortcode_demo">[my_heading type="h2" title="<?php _e('This is my title', 'shortcodes_lib') ?>" margin_top="20px" margin_bottom="20px" text_align="left"]</div>
+				<div class="shortcode_demo">[my_heading type="h2" title="<?php _e('This is my title', 'shortcodes_lib') ?>" margin_top="20" margin_bottom="20" text_align="left"]</div>
 				<input type="hidden" id="shortcodetype" value="1">
 				<input type="hidden" id="shortcodecontent" value="">
 				<div class="attr">
@@ -186,20 +186,20 @@ require_once('../../../wp-admin/admin.php');
 					</select>
 					<span class="description"><?php _e('', 'shortcodes_lib') ?></span>
 				</div>
-				<div class="attr">
+				<div class="attr large">
 					<span class="label"><?php _e('Title', 'shortcodes_lib') ?></span>
 					<input type="text" id="title" class="attrVal" value="<?php _e('This is my title', 'shortcodes_lib') ?>">
 					<span class="description"><?php _e('', 'shortcodes_lib') ?></span>
 				</div>
-				<div class="attr">
+				<div class="attr small">
 					<span class="label"><?php _e('Margin top', 'shortcodes_lib') ?></span>
-					<input type="text" id="margin_top" class="attrVal" value="20px">
-					<span class="description"><?php _e('', 'shortcodes_lib') ?></span>
+					<input type="text" id="margin_top" class="attrVal" value="20">
+					<span class="description"><?php _e('pixels (without unit)', 'shortcodes_lib') ?></span>
 				</div>
-				<div class="attr">
+				<div class="attr small">
 					<span class="label"><?php _e('Margin bottom', 'shortcodes_lib') ?></span>
-					<input type="text" id="margin_bottom" class="attrVal" value="20px">
-					<span class="description"><?php _e('', 'shortcodes_lib') ?></span>
+					<input type="text" id="margin_bottom" class="attrVal" value="20">
+					<span class="description"><?php _e('pixels (without unit)', 'shortcodes_lib') ?></span>
 				</div>
 				<div class="attr">
 					<span class="label"><?php _e('Text align', 'shortcodes_lib') ?></span>
@@ -241,8 +241,8 @@ require_once('../../../wp-admin/admin.php');
 			<div class="shortcode_item" id="my_toggle">
 				<div class="shortcode_demo">[my_toggle title="<?php _e('This Is Your Toggle Title', 'shortcodes_lib') ?>"]<?php _e('Your Toggle Content', 'shortcodes_lib') ?>[/my_toggle]</div>
 				<input type="hidden" id="shortcodetype" value="2">
-				<input type="hidden" id="shortcodecontent" value="<?php _e('Your Toggle Content', 'shortcodes_lib') ?>">
-				<div class="attr">
+				<input type="hidden" id="shortcodecontent" value="<br /><?php _e('Your Toggle Content', 'shortcodes_lib') ?><br />">
+				<div class="attr large">
 					<span class="label"><?php _e('Title', 'shortcodes_lib') ?></span>
 					<input type="text" id="title" class="attrVal" value="<?php _e('This Is Your Toggle Title', 'shortcodes_lib') ?>">
 					<span class="description"><?php _e('', 'shortcodes_lib') ?></span>
@@ -260,7 +260,12 @@ require_once('../../../wp-admin/admin.php');
 			<div class="shortcode_item" id="my_button">
 				<div class="shortcode_demo">[my_button color="blue" url="http://www.google.com" title="<?php _e('Visit Site', 'shortcodes_lib') ?>" target="_blank" border_radius=""]<?php _e('Button Text', 'shortcodes_lib') ?>[/my_button]</div>
 				<input type="hidden" id="shortcodetype" value="2">
-				<input type="hidden" id="shortcodecontent" value='<?php _e('Button Text', 'shortcodes_lib') ?>'>
+				<!--input type="hidden" id="shortcodecontent" value='<?php _e('Button Text', 'shortcodes_lib') ?>'-->
+				<div class="attr large">
+					<span class="label"><?php _e('Button Text', 'shortcodes_lib') ?></span>
+					<input type="text" id="shortcodecontent" class="contentVal" value="<?php _e('Button Text', 'shortcodes_lib') ?>">
+					<span class="description"><?php _e('', 'shortcodes_lib') ?></span>
+				</div>
 				<div class="attr">
 					<span class="label"><?php _e('Color', 'shortcodes_lib') ?></span>
 					<select id="color" class="attrVal">
@@ -279,12 +284,12 @@ require_once('../../../wp-admin/admin.php');
 					</select>
 					<span class="description"><?php _e('', 'shortcodes_lib') ?></span>
 				</div>
-				<div class="attr">
+				<div class="attr large">
 					<span class="label"><?php _e('URL', 'shortcodes_lib') ?></span>
-					<input type="text" id="url" class="attrVal" value="http://www.google.com">
+					<input type="text" id="url" class="attrVal" value="http://">
 					<span class="description"><?php _e('with http://...', 'shortcodes_lib') ?></span>
 				</div>
-				<div class="attr">
+				<div class="attr large">
 					<span class="label"><?php _e('Title', 'shortcodes_lib') ?></span>
 					<input type="text" id="title" class="attrVal" value="<?php _e('Visit Site', 'shortcodes_lib') ?>">
 					<span class="description"><?php _e('', 'shortcodes_lib') ?></span>
@@ -300,9 +305,17 @@ require_once('../../../wp-admin/admin.php');
 					<span class="description"><?php _e('', 'shortcodes_lib') ?></span>
 				</div>
 				<div class="attr">
+					<span class="label"><?php _e('Full width', 'shortcodes_lib') ?></span>
+					<select id="full_width" class="attrVal">
+						<option value="0"><?php _e('no', 'shortcodes_lib') ?></option>
+						<option value="1"><?php _e('yes', 'shortcodes_lib') ?></option>
+					</select>
+					<span class="description"><?php _e('', 'shortcodes_lib') ?></span>
+				</div>
+				<div class="attr small">
 					<span class="label"><?php _e('Border radius', 'shortcodes_lib') ?></span>
 					<input type="text" id="border_radius" class="attrVal" value="">
-					<span class="description"><?php _e('pixels (with unit)', 'shortcodes_lib') ?></span>
+					<span class="description"><?php _e('pixels (without unit)', 'shortcodes_lib') ?></span>
 				</div>
 				<div class="more_info"><?php _e('','shortcodes_lib'); ?></div>
 			</div><!-- //#my_button -->
@@ -331,10 +344,10 @@ require_once('../../../wp-admin/admin.php');
 					</select>
 					<span class="description"><?php _e('', 'shortcodes_lib') ?></span>
 				</div>
-				<div class="attr">
+				<div class="attr small">
 					<span class="label"><?php _e('Width', 'shortcodes_lib') ?></span>
 					<input type="text" id="width" class="attrVal" value="100%">
-					<span class="description"><?php _e('pixels or percent', 'shortcodes_lib') ?></span>
+					<span class="description"><?php _e('pixels or percent (with unit)', 'shortcodes_lib') ?></span>
 				</div>
 				<div class="attr">
 					<span class="label"><?php _e('Float', 'shortcodes_lib') ?></span>
@@ -352,13 +365,18 @@ require_once('../../../wp-admin/admin.php');
 				<div class="shortcode_demo">
 				[my_iframe width="50%" height="100%" frameborder="0" scrolling="auto" class=""]http://www.google.fr/[/my_iframe]</div>
 				<input type="hidden" id="shortcodetype" value="2">
-				<input type="hidden" id="shortcodecontent" value="http://www.google.fr/">
-				<div class="attr">
+				<!--input type="hidden" id="shortcodecontent" value="http://www.google.fr/"-->
+				<div class="attr large">
+					<span class="label"><?php _e('URL', 'shortcodes_lib') ?></span>
+					<input type="text" id="shortcodecontent" class="contentVal" value="http://www.domaine.com">
+					<span class="description"><?php _e('', 'shortcodes_lib') ?></span>
+				</div>
+				<div class="attr small">
 					<span class="label"><?php _e('Width', 'shortcodes_lib') ?></span>
 					<input type="text" id="iframe_width" class="attrVal" value="100%">
 					<span class="description"><?php _e('pixels or percent', 'shortcodes_lib') ?></span>
 				</div>
-				<div class="attr">
+				<div class="attr small">
 					<span class="label"><?php _e('Height', 'shortcodes_lib') ?></span>
 					<input type="text" id="iframe_height" class="attrVal" value="480">
 					<span class="description"><?php _e('pixels or 100% for auto resize height', 'shortcodes_lib') ?></span>
@@ -431,12 +449,12 @@ require_once('../../../wp-admin/admin.php');
 					</select>
 					<span class="description"><?php _e('', 'shortcodes_lib') ?></span>
 				</div>
-				<div class="attr">
+				<div class="attr large">
 					<span class="label"><?php _e('URL', 'shortcodes_lib') ?></span>
 					<input type="text" id="url" class="attrVal" value="http://www.twitter.com/johndoe">
 					<span class="description"><?php _e('with http://...', 'shortcodes_lib') ?></span>
 				</div>
-				<div class="attr">
+				<div class="attr large">
 					<span class="label"><?php _e('Title', 'shortcodes_lib') ?></span>
 					<input type="text" id="title" class="attrVal" value="<?php _e('Follow Us', 'shortcodes_lib') ?>">
 					<span class="description"><?php _e('', 'shortcodes_lib') ?></span>
@@ -462,7 +480,7 @@ require_once('../../../wp-admin/admin.php');
 			<div class="shortcode_item" id="my_testimonial">
 				<div class="shortcode_demo">[my_testimonial by="John Doe"]<?php _e('Your testimonial', 'shortcodes_lib') ?>[/my_testimonial]</div>
 				<input type="hidden" id="shortcodetype" value="2">
-				<input type="hidden" id="shortcodecontent" value="<?php _e('Your testimonial', 'shortcodes_lib') ?>">
+				<input type="hidden" id="shortcodecontent" value="<br /><?php _e('Your testimonial', 'shortcodes_lib') ?><br />">
 				<div class="attr">
 					<span class="label"><?php _e('Author', 'shortcodes_lib') ?></span>
 					<input type="text" id="by" class="attrVal" value="John Doe">
@@ -525,13 +543,13 @@ require_once('../../../wp-admin/admin.php');
                     var output = '['+shortcode+' ';
                     var ctype = '';
                     if(jQuery('#'+my_selectedItem+' #shortcodetype').val() == '2'){
-						var ctype = ' ';
+						var ctype = '';
                         if( jQuery('#'+my_selectedItem+' #shortcodecontent').val() ){
 							ctype += jQuery('#'+my_selectedItem+' #shortcodecontent').val();
 						}else{
 							ctype += '<?php _e('content', 'shortcodes_lib') ?>';
 						}
-                        ctype += ' [/'+shortcode+']';
+                        ctype += '[/'+shortcode+']';
                     }
                     jQuery('#'+my_selectedItem+' .attrVal').each(function(){
                         output += this.id+'="'+this.value+'" ';

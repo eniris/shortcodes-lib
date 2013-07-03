@@ -39,10 +39,10 @@ if( !function_exists('my_clear_floats_shortcode') ) {
 if( !function_exists('my_spacing_shortcode') ) {
 	function my_spacing_shortcode( $atts ) {
 		extract( shortcode_atts( array(
-			'size' => '20px',
+			'size' => '20',
 		  ),
 		  $atts ) );
-	 return '<span class="my-spacing" style="height: '. $size .'"></span>';
+	 return '<span class="my-spacing" style="height: '. $size .'px"></span>';
 	}
 	add_shortcode( 'my_spacing', 'my_spacing_shortcode' );
 }
@@ -55,8 +55,8 @@ if( !function_exists('my_divider_shortcode') ) {
 	function my_divider_shortcode( $atts ) {
 		extract( shortcode_atts( array(
 			'style' => 'solid',
-			'margin_top' => '20px',
-			'margin_bottom' => '20px',
+			'margin_top' => '20',
+			'margin_bottom' => '20',
 			'gotop' => '',
 			'cleardivider' => 'both',
 		  ),
@@ -64,10 +64,10 @@ if( !function_exists('my_divider_shortcode') ) {
 		
 		$output = '<hr class="my-divider '. $style .'" '.$style_attr.' style="';
 			if ( $margin_top ) {
-				$output .= 'margin-top:'. $margin_top .';';
+				$output .= 'margin-top:'. $margin_top .'px;';
 			}
 			if( $margin_bottom ) {
-				$output .= 'margin-bottom:'. $margin_bottom .';';
+				$output .= 'margin-bottom:'. $margin_bottom .'px;';
 			}
 			if( $cleardivider ) {
 				$output .= 'clear:'. $cleardivider .';';
@@ -100,9 +100,9 @@ if( !function_exists('my_social_shortcode') ) {
 			'rel' => '',
 			'border_radius' => ''
 		), $atts ) );
+		$border_radius_style = ( $border_radius ) ? 'border-radius:'. $border_radius .'px' : NULL;
 		
-		return '<a href="' . $url . '" class="my-social-icon" target="_'.$target.'" title="'. $title .'" rel="'. $rel .'"
-><img src="'. plugin_dir_url( __FILE__ ) .'/images/social/'. $icon .'.png" alt="'. $icon .'" /></a>';
+		return '<a href="' . $url . '" class="my-social-icon" target="_'.$target.'" title="'. $title .'" style="'. $border_radius_style .'" rel="'. $rel .'"><img src="'. plugin_dir_url( __FILE__ ) .'/images/social/'. $icon .'.png" alt="'. $icon .'" /></a>';
 	}
 	add_shortcode('my_social', 'my_social_shortcode');
 }
@@ -131,17 +131,19 @@ if ( !function_exists( 'my_highlight_shortcode' ) ) {
 if( !function_exists('my_button_shortcode') ) {
 	function my_button_shortcode( $atts, $content = null ) {
 		extract( shortcode_atts( array(
-			'color' => 'blue',
-			'url' => 'http://www.sympleplorer.com',
-			'title' => 'Visit Site',
-			'target' => '_self',
-			'rel' => '',
-			'border_radius' => '4px'
+			'color' 		=> 'blue',
+			'url' 			=> 'http://www.sympleplorer.com',
+			'title' 		=> 'Visit Site',
+			'target' 		=> '_self',
+			'rel' 			=> '',
+			'full_width'	=> '0',
+			'border_radius' => '4'
 		), $atts ) );
 		
-		$border_radius_style = ( $border_radius ) ? 'style="border-radius:'. $border_radius .'"' : NULL;
+		$full_width_style = ( $full_width ) ? 'display:block;' : NULL;
+		$border_radius_style = ( $border_radius ) ? 'border-radius:'. $border_radius .'px' : NULL;
 		
-		return '<a href="' . $url . '" class="my-button ' . $color . '" target="_'.$target.'" title="'. $title .'" '. $border_radius_style .' rel="'.$rel.'"><span class="my-button-inner" '.$border_radius_style.'>' . $content . '</span></a>';
+		return '<a href="' . $url . '" class="my-button ' . $color . '" target="_'.$target.'" title="'. $title .'" style="'. $full_width_style .''. $border_radius_style .'" rel="'.$rel.'"><span class="my-button-inner" style="'.$border_radius_style.'">' . $content . '</span></a>';
 	}
 	add_shortcode('my_button', 'my_button_shortcode');
 }
@@ -330,7 +332,7 @@ if( !function_exists('my_pricing_shortcode') ) {
 		
 		//set variables
 		$featured_pricing = ( $featured == 'yes' ) ? 'featured' : NULL;
-		$border_radius_style = ( $button_border_radius ) ? 'style="border-radius:'. $button_border_radius .'"' : NULL;
+		$border_radius_style = ( $button_border_radius ) ? 'border-radius:'. $button_border_radius .'px' : NULL;
 		
 		//start content  
 		$pricing_content ='';
@@ -343,7 +345,7 @@ if( !function_exists('my_pricing_shortcode') ) {
 				$pricing_content .= ''. $content. '';
 			$pricing_content .= '</div>';
 			if( $button_url ) {
-				$pricing_content .= '<div class="my-pricing-button"><a href="'. $button_url .'" class="my-button '. $button_color .'" target="_'. $button_target .'" rel="'. $button_rel .'" '. $border_radius_style .'><span class="my-button-inner" '. $border_radius_style .'>'. $button_text .'</span></a></div>';
+				$pricing_content .= '<div class="my-pricing-button"><a href="'. $button_url .'" class="my-button '. $button_color .'" target="_'. $button_target .'" rel="'. $button_rel .'" style="'. $border_radius_style .'"><span class="my-button-inner" style="'. $border_radius_style .'">'. $button_text .'</span></a></div>';
 			}
 		$pricing_content .= '</div>';  
 		return $pricing_content;
@@ -431,6 +433,7 @@ if (! function_exists( 'my_shortcode_iframe' ) ) :
 // [my_iframe width="50%" height="100%" frameborder="0" scrolling="auto" class="my_iframe_full"]http://www.business-geografic.com/[/my_iframe]
 	function my_shortcode_iframe( $atts, $content = null ) {
 		extract(shortcode_atts(array(
+			'iframe_src'		=> 'http://',
 			'iframe_width' 		=> '100%',
 			'iframe_height' 		=> '480',
 			'iframe_frameborder'	=> '0',

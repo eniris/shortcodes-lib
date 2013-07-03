@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: Shortcodes Lib\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-04-28 01:19+0100\n"
-"PO-Revision-Date: 2013-04-28 01:20+0100\n"
-"Last-Translator: Benoit <eniris@gmail.com>\n"
+"PO-Revision-Date: 2013-07-03 14:55+0100\n"
+"Last-Translator: Benoit Sparza <bsparza@business-geografic.net>\n"
 "Language-Team: Business Geografic <information@simalis.net>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
@@ -312,7 +312,7 @@ msgstr "orange"
 
 #: ../my-shortcode-list.php:272
 msgid "rosy"
-msgstr "rosé"
+msgstr "ros&eacute;"
 
 #: ../my-shortcode-list.php:273
 msgid "pink"

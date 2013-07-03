@@ -5,8 +5,28 @@ html, body {height: 100%;}
 .footer {position: relative;height: 35px;border-top: 1px solid #ccc;padding: 5px 8px;}
 .shortcode_item_title{margin-bottom:0;padding: 3px;}
 .attr{padding: 3px;border-bottom: 1px dotted #E5E5E5;}
-.more_info{padding: 3px;}
+.attr .more_info{padding: 3px;}
+.attr.large textarea, 
+.attr.large input[type="text"], 
+.attr.large input[type="password"], 
+.attr.large input[type="file"], 
+.attr.large input[type="email"], 
+.attr.large input[type="number"], 
+.attr.large input[type="search"], 
+.attr.large input[type="tel"], 
+.attr.large input[type="url"]{width:78%;}
+.attr.large .description{display:block;margin-left:22%;}
+.attr.small textarea, 
+.attr.small input[type="text"], 
+.attr.small input[type="password"], 
+.attr.small input[type="file"], 
+.attr.small input[type="email"], 
+.attr.small input[type="number"], 
+.attr.small input[type="search"], 
+.attr.small input[type="tel"], 
+.attr.small input[type="url"]{width:48px;}
 .shortcode_demo{margin:.5em 0;padding: 3px;background-color:#f5f5f5;border:1px solid #f0f0f0;}
-.label{display: inline-block;width: 120px;}
-select option{padding:0 5px;}
-select optgroup option{padding-left:16px;}
+.label{display: inline-block;padding-top:5px;width:20%;vertical-align:top;}
+.attr select{max-width:78%;}
+.attr select option{padding:0 5px;}
+.attr select optgroup option{padding-left:16px;}
