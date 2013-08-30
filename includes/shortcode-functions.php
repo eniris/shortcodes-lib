@@ -102,7 +102,7 @@ if( !function_exists('my_social_shortcode') ) {
 		), $atts ) );
 		$border_radius_style = ( $border_radius ) ? 'border-radius:'. $border_radius .'px' : NULL;
 		
-		return '<a href="' . $url . '" class="my-social-icon" target="_'.$target.'" title="'. $title .'" style="'. $border_radius_style .'" rel="'. $rel .'"><img src="'. plugin_dir_url( __FILE__ ) .'/images/social/'. $icon .'.png" alt="'. $icon .'" /></a>';
+		return '<a href="' . $url . '" class="my-social-icon" target="'.$target.'" title="'. $title .'" style="'. $border_radius_style .'" rel="'. $rel .'"><img src="'. plugin_dir_url( __FILE__ ) .'/images/social/'. $icon .'.png" alt="'. $icon .'" /></a>';
 	}
 	add_shortcode('my_social', 'my_social_shortcode');
 }
@@ -143,7 +143,7 @@ if( !function_exists('my_button_shortcode') ) {
 		$full_width_style = ( $full_width ) ? 'display:block;' : NULL;
 		$border_radius_style = ( $border_radius ) ? 'border-radius:'. $border_radius .'px' : NULL;
 		
-		return '<a href="' . $url . '" class="my-button ' . $color . '" target="_'.$target.'" title="'. $title .'" style="'. $full_width_style .''. $border_radius_style .'" rel="'.$rel.'"><span class="my-button-inner" style="'.$border_radius_style.'">' . $content . '</span></a>';
+		return '<a href="' . $url . '" class="my-button ' . $color . '" target="'.$target.'" title="'. $title .'" style="'. $full_width_style .''. $border_radius_style .'" rel="'.$rel.'"><span class="my-button-inner" style="'.$border_radius_style.'">' . $content . '</span></a>';
 	}
 	add_shortcode('my_button', 'my_button_shortcode');
 }
@@ -345,7 +345,7 @@ if( !function_exists('my_pricing_shortcode') ) {
 				$pricing_content .= ''. $content. '';
 			$pricing_content .= '</div>';
 			if( $button_url ) {
-				$pricing_content .= '<div class="my-pricing-button"><a href="'. $button_url .'" class="my-button '. $button_color .'" target="_'. $button_target .'" rel="'. $button_rel .'" style="'. $border_radius_style .'"><span class="my-button-inner" style="'. $border_radius_style .'">'. $button_text .'</span></a></div>';
+				$pricing_content .= '<div class="my-pricing-button"><a href="'. $button_url .'" class="my-button '. $button_color .'" target="'. $button_target .'" rel="'. $button_rel .'" style="'. $border_radius_style .'"><span class="my-button-inner" style="'. $border_radius_style .'">'. $button_text .'</span></a></div>';
 			}
 		$pricing_content .= '</div>';  
 		return $pricing_content;

@@ -18,7 +18,7 @@ require_once('../../../wp-admin/admin.php');
     <body>
 		<div class="toolbar">
             <?php _e('Select ','shortcodes_lib'); ?>
-			<select id="my_selectedelement" style="width:190px;" onchange="shortcodeItem();">
+			<select id="my_selectedelement" style="width:190px;" onChange="shortcodeItem();">
 				<option selected="selected"><?php _e('--Plugin shortcodes--', 'shortcodes_lib') ?></option>
 				<option value='my_clear_floats'><?php _e('Clear Floats', 'shortcodes_lib') ?></option>
 				<option value='my_divider'><?php _e('Divider', 'shortcodes_lib') ?></option>
@@ -78,7 +78,7 @@ require_once('../../../wp-admin/admin.php');
 			 echo '</select>';
 			?>
             <div class="fbutton" style="float:right;">
-                <a class="button" href="#insert_sc" onclick="sendMyCode();return false;">
+                <a class="button" href="#insert_sc" onClick="sendMyCode();return false;">
                     <i class="icon-plus" style="margin-top:-1px;"></i><?php _e('Insert Shortcode','shortcodes_lib'); ?>
                 </a>
             </div>
@@ -462,7 +462,7 @@ require_once('../../../wp-admin/admin.php');
 				<div class="attr">
 					<span class="label"><?php _e('Target', 'shortcodes_lib') ?></span>
 					<select id="target" class="attrVal">
-						<option value="_blank"><?php _e('_', 'shortcodes_lib') ?></option>
+						<option value="_blank"><?php _e('_blank', 'shortcodes_lib') ?></option>
 						<option value="_self"><?php _e('_self', 'shortcodes_lib') ?></option>
 						<option value="_parent"><?php _e('_parent', 'shortcodes_lib') ?></option>
 						<option value="_top"><?php _e('_top', 'shortcodes_lib') ?></option>
