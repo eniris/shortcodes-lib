@@ -4,7 +4,7 @@ Plugin Name: Shortcodes Lib
 Plugin URI: https://github.com/eniris/shortcodes-lib
 Description: A free shortcodes plugin, based to shortcoder-insert-tool and symple-shortcodes plugins
 Author: Benoit S.
-Version: 1.2
+Version: 1.3
 */
 
 // 

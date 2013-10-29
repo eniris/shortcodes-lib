@@ -14,6 +14,7 @@ require_once('../../../wp-admin/admin.php');
         <link media="all" type="text/css" href="<?php echo plugin_dir_url(__FILE__); ?>styles/core.css" rel="stylesheet">
         <link media="all" type="text/css" href="<?php echo plugin_dir_url(__FILE__); ?>styles/panel.css" rel="stylesheet">
         <script type='text/javascript' src='<?php echo get_admin_url(); ?>load-scripts.php?c=1&amp;load=jquery,utils'></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     </head>
     <body>
 		<div class="toolbar">
